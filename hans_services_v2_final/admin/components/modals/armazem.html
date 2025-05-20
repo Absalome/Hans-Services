@@ -1,0 +1,35 @@
+<!-- Modal de Adicionar/Editar Armazém -->
+<div id="modal-armazem" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modal-armazem-title">Adicionar Armazém</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="form-armazem">
+                <div class="form-group">
+                    <label for="armazem-nome">Nome*</label>
+                    <input type="text" class="form-control" id="armazem-nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="armazem-localizacao">Localização*</label>
+                    <input type="text" class="form-control" id="armazem-localizacao" required>
+                </div>
+                <div class="form-group">
+                    <label for="armazem-responsavel">Funcionário Responsável*</label>
+                    <select class="form-control" id="armazem-responsavel" required>
+                        <option value="">Selecione um funcionário</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="armazem-descricao">Descrição</label>
+                    <textarea class="form-control" id="armazem-descricao" rows="3"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-danger" id="btn-cancelar-armazem">Cancelar</button>
+            <button class="btn btn-primary" id="btn-salvar-armazem">Salvar</button>
+        </div>
+    </div>
+</div>

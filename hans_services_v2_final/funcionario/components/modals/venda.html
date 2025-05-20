@@ -1,0 +1,47 @@
+<!-- Modal de Venda para o Funcionário -->
+<div id="modal-venda" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Realizar Venda</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="form-venda">
+                <div class="form-group">
+                    <label for="venda-cliente">Cliente*</label>
+                    <select class="form-control" id="venda-cliente" required>
+                        <option value="">Selecione um cliente</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="venda-armazem">Armazém*</label>
+                    <select class="form-control" id="venda-armazem" required>
+                        <option value="">Selecione um armazém</option>
+                    </select>
+                </div>
+                <div class="form-group" id="venda-produto-container" style="display: none;">
+                    <label for="venda-produto">Produto</label>
+                    <select class="form-control" id="venda-produto">
+                        <option value="">Selecione um produto</option>
+                    </select>
+                </div>
+                <div class="form-group" id="venda-quantidade-container" style="display: none;">
+                    <label for="venda-quantidade">Quantidade (Disponível: <span id="venda-quantidade-disponivel">0</span>)</label>
+                    <input type="number" class="form-control" id="venda-quantidade" min="1" value="1">
+                    <button type="button" class="btn btn-primary" id="btn-adicionar-produto-venda">Adicionar Produto</button>
+                </div>
+                <div class="produtos-venda">
+                    <h3>Produtos Selecionados</h3>
+                    <div id="venda-produtos-lista" class="produtos-lista"></div>
+                    <div class="venda-total">
+                        <h4>Total: <span id="venda-total">MZN 0,00</span></h4>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-danger" id="btn-cancelar-venda">Cancelar</button>
+            <button class="btn btn-primary" id="btn-finalizar-venda" disabled>Finalizar Venda</button>
+        </div>
+    </div>
+</div>

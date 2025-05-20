@@ -1,0 +1,57 @@
+<!-- Modal de Adicionar/Editar Funcionário -->
+<div id="modal-funcionario" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modal-funcionario-title">Adicionar Funcionário</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="form-funcionario">
+                <div class="form-group">
+                    <label for="funcionario-nome">Nome*</label>
+                    <input type="text" class="form-control" id="funcionario-nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="funcionario-email">Email*</label>
+                    <input type="email" class="form-control" id="funcionario-email" placeholder="exemplo@func.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="funcionario-telefone">Telefone*</label>
+                    <input type="tel" class="form-control" id="funcionario-telefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="funcionario-cargo">Cargo*</label>
+                    <select class="form-control" id="funcionario-cargo" required>
+                        <option value="">Selecione um cargo</option>
+                        <option value="Camionista">Camionista</option>
+                        <option value="Vendedor">Vendedor</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Limpeza">Limpeza</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="funcionario-armazem">Armazém*</label>
+                    <select class="form-control" id="funcionario-armazem" required>
+                        <option value="">Selecione um armazém</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="funcionario-data">Data de Contratação*</label>
+                    <input type="date" class="form-control" id="funcionario-data" required>
+                </div>
+                <div class="form-group">
+                    <label for="funcionario-senha">Senha*</label>
+                    <input type="password" class="form-control" id="funcionario-senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="funcionario-confirmar-senha">Confirmar Senha*</label>
+                    <input type="password" class="form-control" id="funcionario-confirmar-senha" required>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-danger" id="btn-cancelar-funcionario">Cancelar</button>
+            <button class="btn btn-primary" id="btn-salvar-funcionario">Salvar</button>
+        </div>
+    </div>
+</div>

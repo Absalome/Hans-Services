@@ -1,0 +1,41 @@
+<!-- Modal de Adicionar/Editar Cliente para o Funcionário -->
+<div id="modal-cliente" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modal-cliente-title">Adicionar Cliente</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="form-cliente">
+                <div class="form-group">
+                    <label for="cliente-nome">Nome*</label>
+                    <input type="text" class="form-control" id="cliente-nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="cliente-email">Email*</label>
+                    <input type="email" class="form-control" id="cliente-email" placeholder="exemplo@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="cliente-telefone">Telefone*</label>
+                    <input type="tel" class="form-control" id="cliente-telefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="cliente-endereco">Endereço</label>
+                    <textarea class="form-control" id="cliente-endereco" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="cliente-senha">Senha*</label>
+                    <input type="password" class="form-control" id="cliente-senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="cliente-confirmar-senha">Confirmar Senha*</label>
+                    <input type="password" class="form-control" id="cliente-confirmar-senha" required>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-danger" id="btn-cancelar-cliente">Cancelar</button>
+            <button class="btn btn-primary" id="btn-salvar-cliente">Salvar</button>
+        </div>
+    </div>
+</div>

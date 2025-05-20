@@ -1,0 +1,78 @@
+<!-- Componente de Perfil para o Cliente -->
+<div id="perfil-page" class="page">
+    <div class="section">
+        <div class="section-header">
+            <h2>Meu Perfil</h2>
+        </div>
+        <div class="section-content">
+            <div class="row">
+                <div class="col">
+                    <h3>Informações Pessoais</h3>
+                    <form id="form-perfil-cliente">
+                        <div class="form-group">
+                            <label for="cliente-nome">Nome</label>
+                            <input type="text" class="form-control" id="cliente-nome" value="Maria Oliveira">
+                        </div>
+                        <div class="form-group">
+                            <label for="cliente-email">Email</label>
+                            <input type="email" class="form-control" id="cliente-email" value="maria.oliveira@gmail.com" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="cliente-telefone">Telefone</label>
+                            <input type="text" class="form-control" id="cliente-telefone" value="(11) 98765-4321">
+                        </div>
+                        <div class="form-group">
+                            <label for="cliente-endereco">Endereço</label>
+                            <textarea class="form-control" id="cliente-endereco" rows="3">Av. Principal, 123, Maputo</textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                    </form>
+                </div>
+                <div class="col">
+                    <h3>Alterar Senha</h3>
+                    <form id="form-alterar-senha-cliente">
+                        <div class="form-group">
+                            <label for="senha-atual-cliente">Senha Atual</label>
+                            <input type="password" class="form-control" id="senha-atual-cliente" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nova-senha-cliente">Nova Senha</label>
+                            <input type="password" class="form-control" id="nova-senha-cliente" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmar-senha-cliente">Confirmar Nova Senha</label>
+                            <input type="password" class="form-control" id="confirmar-senha-cliente" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Alterar Senha</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <h3>Preferências de Notificação</h3>
+                    <form id="form-preferencias-cliente">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="notificar-promocoes" checked>
+                            <label class="form-check-label" for="notificar-promocoes">
+                                Receber notificações de promoções
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="notificar-novos-produtos" checked>
+                            <label class="form-check-label" for="notificar-novos-produtos">
+                                Receber notificações de novos produtos
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="notificar-status-compra" checked>
+                            <label class="form-check-label" for="notificar-status-compra">
+                                Receber notificações de status de compra
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Salvar Preferências</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

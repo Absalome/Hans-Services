@@ -1,0 +1,60 @@
+<!-- Modal de Adicionar/Editar Produto -->
+<div id="modal-produto" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modal-produto-title">Adicionar Produto</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="form-produto">
+                <div class="form-group">
+                    <label for="produto-nome">Nome*</label>
+                    <input type="text" class="form-control" id="produto-nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="produto-descricao">Descrição</label>
+                    <textarea class="form-control" id="produto-descricao" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="produto-armazem">Armazém*</label>
+                    <select class="form-control" id="produto-armazem" required>
+                        <option value="">Selecione um armazém</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="produto-quantidade">Quantidade*</label>
+                    <input type="number" class="form-control" id="produto-quantidade" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="produto-preco">Preço Unitário (MZN)*</label>
+                    <input type="number" class="form-control" id="produto-preco" min="0" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="produto-categoria">Categoria</label>
+                    <select class="form-control" id="produto-categoria">
+                        <option value="">Selecione uma categoria</option>
+                        <option value="1">Alimentos</option>
+                        <option value="2">Bebidas</option>
+                        <option value="3">Limpeza</option>
+                        <option value="4">Eletrônicos</option>
+                        <option value="5">Vestuário</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="produto-imagem-input">Imagem do Produto</label>
+                    <input type="file" class="form-control" id="produto-imagem-input" accept="image/*">
+                    <div id="produto-imagem-preview" class="image-preview">
+                        <div class="image-preview-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Selecione uma imagem</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-danger" id="btn-cancelar-produto">Cancelar</button>
+            <button class="btn btn-primary" id="btn-salvar-produto">Salvar</button>
+        </div>
+    </div>
+</div>

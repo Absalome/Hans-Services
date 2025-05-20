@@ -1,0 +1,137 @@
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .dashboard-sections {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 200px;
+    }
+    
+    .main-content {
+        margin-left: 200px;
+    }
+    
+    .row {
+        flex-direction: column;
+    }
+    
+    .col {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+        overflow: visible;
+    }
+    
+    .sidebar-header h2,
+    .sidebar-menu span {
+        display: none;
+    }
+    
+    .sidebar-menu li {
+        padding: 15px;
+        justify-content: center;
+    }
+    
+    .sidebar-menu li i {
+        margin-right: 0;
+        font-size: 20px;
+    }
+    
+    .main-content {
+        margin-left: 60px;
+    }
+    
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .modal-content {
+        width: 95%;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 0;
+        z-index: 1100;
+    }
+    
+    .sidebar.active {
+        width: 200px;
+    }
+    
+    .sidebar.active .sidebar-header h2,
+    .sidebar.active .sidebar-menu span {
+        display: block;
+    }
+    
+    .sidebar.active .sidebar-menu li {
+        padding: 15px 20px;
+        justify-content: flex-start;
+    }
+    
+    .sidebar.active .sidebar-menu li i {
+        margin-right: 10px;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+    
+    .header {
+        position: relative;
+    }
+    
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    .header h1 {
+        margin-left: 40px;
+        font-size: 20px;
+    }
+    
+    .user-info img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .user-dropdown span {
+        font-size: 14px;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .table-container {
+        font-size: 14px;
+    }
+    
+    .table-actions button {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .produtos-grid {
+        grid-template-columns: 1fr;
+    }
+}

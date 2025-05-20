@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hans Services - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .login-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .login-logo {
+            margin-bottom: 20px;
+        }
+        
+        .login-logo img {
+            max-width: 150px;
+            height: auto;
+        }
+        
+        .login-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .login-form {
+            text-align: left;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: #0099cc;
+            outline: none;
+        }
+        
+        .btn-login {
+            background-color: #0099cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-login:hover {
+            background-color: #007baa;
+        }
+        
+        .forgot-password {
+            display: block;
+            margin-top: 15px;
+            color: #0099cc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+        
+        .email-info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #666;
+            text-align: left;
+        }
+        
+        .email-info h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .email-info p {
+            margin-bottom: 8px;
+        }
+        
+        .email-example {
+            font-family: monospace;
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        
+        .error-message {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 20px;
+                margin: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-logo">
+            <img src="img/logo.png" alt="Hans Services" id="logo-placeholder">
+        </div>
+        <h1 class="login-title">Hans Services</h1>
+        
+        <form class="login-form" id="login-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Digite seu email" required>
+                <div class="error-message" id="email-error">Email inválido. Verifique o formato.</div>
+            </div>
+            <div class="form-group">
+                <label for="password">Palavra-passe</label>
+                <input type="password" class="form-control" id="password" placeholder="Digite sua palavra-passe" required>
+                <div class="error-message" id="password-error">Palavra-passe incorreta.</div>
+            </div>
+            <button type="submit" class="btn-login">Entrar</button>
+            <a href="#" class="forgot-password" id="forgot-password">Esqueci a senha</a>
+        </form>
+        
+        <div class="email-info">
+            <h3>Informação de Acesso</h3>
+            <p>O tipo de usuário é determinado pelo formato do email:</p>
+            <p>- Administrador: <span class="email-example">email@admin.com</span></p>
+            <p>- Funcionário: <span class="email-example">email@func.com</span></p>
+            <p>- Cliente: <span class="email-example">email@gmail.com</span></p>
+        </div>
+    </div>
+
+    <!-- Modal de Recuperação de Senha -->
+    <div id="modal-recuperar-senha" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Recuperar Senha</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Por favor, informe seu email cadastrado para receber instruções de recuperação de senha.</p>
+                <form id="form-recuperar-senha">
+                    <div class="form-group">
+                        <label for="recuperar-email">Email</label>
+                        <input type="email" class="form-control" id="recuperar-email" required>
+                        <div class="error-message" id="recuperar-email-error">Email inválido.</div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" id="btn-cancelar-recuperacao">Cancelar</button>
+                <button class="btn btn-primary" id="btn-enviar-recuperacao">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

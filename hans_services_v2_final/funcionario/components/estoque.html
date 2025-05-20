@@ -1,0 +1,52 @@
+<!-- Componente de Estoque para o Funcionário -->
+<div id="estoque-page" class="page">
+    <div class="section">
+        <div class="section-header">
+            <h2>Visualização de Estoque</h2>
+        </div>
+        <div class="section-content">
+            <div class="form-group">
+                <label for="estoque-armazem">Selecione o Armazém</label>
+                <select class="form-control" id="estoque-armazem">
+                    <option value="">Todos os Armazéns</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Buscar produtos..." id="busca-estoque">
+                    <button class="btn btn-primary" id="btn-buscar-estoque">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Imagem</th>
+                            <th>Armazém</th>
+                            <th>Quantidade</th>
+                            <th>Preço Unitário</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="estoque-table-body">
+                        <tr>
+                            <td colspan="6" class="text-center">Nenhum produto encontrado.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mt-4">
+                <h3>Produtos com Estoque Baixo</h3>
+                <div id="estoque-baixo">
+                    <p>Nenhum produto com estoque baixo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

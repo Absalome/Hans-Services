@@ -1,0 +1,64 @@
+<!-- Componente de Perfil para o Funcionário -->
+<div id="perfil-page" class="page">
+    <div class="section">
+        <div class="section-header">
+            <h2>Meu Perfil</h2>
+        </div>
+        <div class="section-content">
+            <div class="row">
+                <div class="col">
+                    <h3>Informações Pessoais</h3>
+                    <p><strong>Nome:</strong> João Silva</p>
+                    <p><strong>Email:</strong> joao.silva@func.com</p>
+                    <p><strong>Telefone:</strong> (11) 98765-4321</p>
+                    <p><strong>Cargo:</strong> Vendedor</p>
+                    <p><strong>Armazém:</strong> Armazém Central</p>
+                    <p><strong>Data de Contratação:</strong> 01/01/2025</p>
+                </div>
+                <div class="col">
+                    <h3>Alterar Senha</h3>
+                    <form id="form-alterar-senha-funcionario">
+                        <div class="form-group">
+                            <label for="senha-atual">Senha Atual</label>
+                            <input type="password" class="form-control" id="senha-atual" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nova-senha">Nova Senha</label>
+                            <input type="password" class="form-control" id="nova-senha" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmar-senha">Confirmar Nova Senha</label>
+                            <input type="password" class="form-control" id="confirmar-senha" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Alterar Senha</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <h3>Estatísticas de Vendas</h3>
+                    <div class="cards-container">
+                        <div class="card">
+                            <div class="card-info">
+                                <h3>0</h3>
+                                <p>Total de Vendas</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-info">
+                                <h3>0</h3>
+                                <p>Clientes Atendidos</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-info">
+                                <h3>0 MZN</h3>
+                                <p>Valor Total</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

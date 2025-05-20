@@ -1,0 +1,48 @@
+<!-- Componente de Compras para o Cliente -->
+<div id="compras-page" class="page">
+    <div class="section">
+        <div class="section-header">
+            <h2>Realizar Compras</h2>
+        </div>
+        <div class="section-content">
+            <div class="form-group">
+                <label for="compra-armazem">Selecione o Armazém</label>
+                <select class="form-control" id="compra-armazem">
+                    <option value="">Selecione um armazém</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Buscar produtos..." id="busca-produtos">
+                    <button class="btn btn-primary" id="btn-buscar-produtos">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </div>
+            </div>
+            
+            <div class="produtos-grid" id="produtos-disponiveis">
+                <p>Selecione um armazém para ver os produtos disponíveis.</p>
+            </div>
+            
+            <div class="carrinho-compra">
+                <h3>Carrinho de Compras</h3>
+                <div id="carrinho-compra">
+                    <p class="text-center">Seu carrinho está vazio.</p>
+                </div>
+                <div class="carrinho-total">
+                    <span>Total:</span>
+                    <span id="compra-total">0 MZN</span>
+                </div>
+                <div class="carrinho-actions">
+                    <button class="btn btn-danger" id="btn-limpar-carrinho">
+                        <i class="fas fa-trash"></i> Limpar Carrinho
+                    </button>
+                    <button class="btn btn-primary" id="btn-finalizar-compra">
+                        <i class="fas fa-check"></i> Finalizar Compra
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

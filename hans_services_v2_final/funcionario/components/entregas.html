@@ -1,0 +1,134 @@
+<!-- Componente de Entregas para o Funcionário -->
+<div id="entregas-page" class="page">
+    <div class="section">
+        <div class="section-header">
+            <h2>Gestão de Entregas</h2>
+            <button class="btn btn-primary" id="btn-nova-entrega">
+                <i class="fas fa-plus"></i> Nova Entrega
+            </button>
+        </div>
+        <div class="section-content">
+            <div class="form-group">
+                <label for="filtro-status-entrega">Filtrar por Status</label>
+                <select class="form-control" id="filtro-status-entrega">
+                    <option value="">Todos os status</option>
+                    <option value="pendente">Pendente</option>
+                    <option value="em-transito">Em Trânsito</option>
+                    <option value="entregue">Entregue</option>
+                    <option value="cancelada">Cancelada</option>
+                </select>
+            </div>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Endereço</th>
+                            <th>Data</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="entregas-table-body">
+                        <tr>
+                            <td colspan="6" class="text-center">Carregando entregas...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section mt-4">
+        <div class="section-header">
+            <h2>Mapa de Entregas</h2>
+        </div>
+        <div class="section-content">
+            <div id="mapa-entregas" style="height: 400px; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center;">
+                <p>Mapa de entregas será exibido aqui</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Nova Entrega -->
+<div id="modal-entrega" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modal-entrega-title">Nova Entrega</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="form-entrega">
+                <div class="form-group">
+                    <label for="entrega-venda">Venda Relacionada</label>
+                    <select class="form-control" id="entrega-venda" required>
+                        <option value="">Selecione uma venda</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="entrega-cliente">Cliente</label>
+                    <input type="text" class="form-control" id="entrega-cliente" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="entrega-endereco">Endereço de Entrega</label>
+                    <textarea class="form-control" id="entrega-endereco" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="entrega-data">Data Prevista</label>
+                    <input type="date" class="form-control" id="entrega-data" required>
+                </div>
+                <div class="form-group">
+                    <label for="entrega-observacoes">Observações</label>
+                    <textarea class="form-control" id="entrega-observacoes" rows="3"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-danger" id="btn-cancelar-entrega">Cancelar</button>
+            <button class="btn btn-primary" id="btn-salvar-entrega">Salvar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Atualizar Status -->
+<div id="modal-status-entrega" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Atualizar Status da Entrega</h2>
+            <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="form-status-entrega">
+                <div class="form-group">
+                    <label for="entrega-id">ID da Entrega</label>
+                    <input type="text" class="form-control" id="entrega-id" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="entrega-cliente-status">Cliente</label>
+                    <input type="text" class="form-control" id="entrega-cliente-status" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="entrega-status">Novo Status</label>
+                    <select class="form-control" id="entrega-status" required>
+                        <option value="">Selecione um status</option>
+                        <option value="pendente">Pendente</option>
+                        <option value="em-transito">Em Trânsito</option>
+                        <option value="entregue">Entregue</option>
+                        <option value="cancelada">Cancelada</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="entrega-comentario">Comentário</label>
+                    <textarea class="form-control" id="entrega-comentario" rows="3"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-danger" id="btn-cancelar-status">Cancelar</button>
+            <button class="btn btn-primary" id="btn-salvar-status">Salvar</button>
+        </div>
+    </div>
+</div>

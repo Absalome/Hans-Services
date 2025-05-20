@@ -1,0 +1,56 @@
+<!-- Componente de Gerenciamento de Stock para o Administrador -->
+<div id="stock-page" class="page">
+    <div class="section">
+        <div class="section-header">
+            <h2>Gerenciamento de Stock</h2>
+            <button class="btn btn-primary" id="btn-adicionar-produto">
+                <i class="fas fa-plus"></i> Adicionar Produto
+            </button>
+        </div>
+        <div class="section-content">
+            <div class="form-group">
+                <label for="stock-armazem">Selecione o Armazém</label>
+                <select class="form-control" id="stock-armazem">
+                    <option value="">Todos os Armazéns</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Buscar produtos..." id="busca-stock">
+                    <button class="btn btn-primary" id="btn-buscar-stock">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Imagem</th>
+                            <th>Armazém</th>
+                            <th>Quantidade</th>
+                            <th>Preço Unitário</th>
+                            <th>Valor Total</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stock-table-body">
+                        <tr>
+                            <td colspan="7" class="text-center">Nenhum produto encontrado.</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5" class="text-right"><strong>Total:</strong></td>
+                            <td><strong>0 MZN</strong></td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
